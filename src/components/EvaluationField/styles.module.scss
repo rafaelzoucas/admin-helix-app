@@ -1,0 +1,214 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 0.5rem;
+
+    width: 100%;
+
+    padding: 1rem;
+
+    background-color: #fff;
+
+    border-radius: 10px;
+
+    box-shadow: 3px 3px 15px rgba($color: #000000, $alpha: 0.05);
+    
+    .toEvaluate {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        width: 50%;
+        
+        .data {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            margin-top: 1rem;
+
+            .profilePicture {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                width: 5rem;
+                height: 5rem;
+
+                background-color: var(--gray-300);
+
+                font-size: 3rem;
+                color: #fff;
+
+                border-radius: 4rem;
+            }
+
+            .info {
+                display: flex;
+                flex-direction: column;
+                // align-items: center;
+
+                margin-left: 1rem;
+
+                color: var(--gray-500);
+
+                max-width: 300px;
+
+                p {
+                    margin-top: 0.25rem;
+                }
+            }
+        }
+
+        .actions {
+            position: relative;
+            bottom: 0;
+            color: var(--gray-300);
+
+            .action {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                
+                padding: 1rem;
+                margin: 0.25rem 0 0.5rem 0;
+                
+                width: 100%;
+                height: 3rem;
+                
+                border: 1px solid var(--gray-100);
+                border-radius: 10px;
+                
+                cursor: pointer;
+                
+                .checkCircle {
+                    display: none;
+                }
+            }
+            
+            .actionPaymentOnPressed {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                
+                padding: 1rem;
+                margin: 0.25rem 0 0.5rem 0;
+                
+                width: 100%;
+                
+                border: 1px solid var(--orange-700);
+                border-radius: 10px;
+                
+                cursor: pointer;
+                
+                color: var(--orange-700);
+                
+                div {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: row;
+                    
+                    :last-child {
+                        margin-left: auto;
+                    }
+                }
+
+                input {
+                    margin-top: 0.5rem;
+                }
+                
+                .checkCircle {
+                    font-size: 1.5rem;
+                }
+            }
+
+            .actionOnPressed {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                
+                padding: 1rem;
+                margin: 0.25rem 0 0.5rem 0;
+                
+                width: 100%;
+                
+                border: 1px solid var(--orange-700);
+                border-radius: 10px;
+                
+                cursor: pointer;
+                
+                color: var(--orange-700);                
+                
+                .checkCircle {
+                    font-size: 1.5rem;
+                }
+            }
+
+            button {
+                height: 4rem;
+                font-weight: 500;
+
+                margin-top: 1.5rem;
+            }
+        }
+
+    }
+
+    .receipt {
+        background-color: var(--background);
+        width: 100%;
+
+        margin-left: 1rem;
+
+        border-radius: 10px;
+
+        overflow-y: scroll;
+        
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .data {
+        display: flex;
+        flex-direction: column;
+
+        margin: 1rem;
+
+        .profilePicture {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 5rem;
+            height: 5rem;
+
+            background-color: var(--gray-300);
+
+            font-size: 3rem;
+            color: #fff;
+
+            border-radius: 4rem;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+
+            margin-top: 1rem;
+
+            color: var(--gray-500);
+
+            max-width: 300px;
+
+            span {
+                margin-top: 1rem;
+            }
+
+            p {
+                margin-top: 0.25rem;
+            }
+        }
+    }
+}

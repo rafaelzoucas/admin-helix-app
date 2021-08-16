@@ -1,0 +1,76 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    width: 100%;
+
+    padding: 1rem;
+
+    margin-top: 0.5rem;
+
+    background-color: #fff;
+
+    border-radius: 10px;
+
+    box-shadow: 3px 3px 15px rgba($color: #000000, $alpha: 0.05);
+    
+    .profile {
+        font-size: 3rem;
+        color: var(--gray-300);
+    }
+
+    .iconMoney {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 3rem;
+        height: 3rem;
+
+        border-radius: 20rem;
+
+        font-size: 1.875rem;
+        color: var(--green-700);
+
+        background-color: var(--green-100);
+    }
+
+    .iconCostumer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 3rem;
+        height: 3rem;
+
+        border-radius: 20rem;
+
+        font-size: 1.5rem;
+        color: #FFF;
+
+        background-color: var(--gray-300);
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        margin-left: 1rem;
+
+        color: var(--gray-500);
+    }
+
+    button {
+        background-color: var(--orange-100);
+        color: var(--orange-700);
+        font-weight: 500;
+        width: auto;
+        height: 2rem;
+
+        margin-left: auto;
+    }
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
