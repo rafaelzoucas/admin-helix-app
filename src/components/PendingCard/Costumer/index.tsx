@@ -19,10 +19,7 @@ export default function PendingCostumer() {
             <div className={styles.info}>
                 <strong>Estabelecimento</strong>
                 <span>(18) 9 9874-5656</span>
-                <span>Rua Castro Alves, 1 - Assis SP</span>
             </div>
-
-            <button>Avaliar</button>
         </div>
     )
 }

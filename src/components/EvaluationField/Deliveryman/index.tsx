@@ -14,18 +14,9 @@ export default function Deliveryman() {
     return(
         <>
             <div className={styles.toEvaluate}>
-                <div className={pages.groupBtnSmall}>
-                    <button className={pages.active}>Foto</button>
-                    <button>CNH</button>
-                    <button>Veículo</button>
-                    <button>Residência</button>
-                </div>
+                
 
-                <div className={styles.data}>
-                    <div className={styles.profilePicture}>
-                        <FontAwesomeIcon icon="user" />
-                    </div>
-
+                <div className={styles.dataDeliveryman}>
                     <div className={styles.info}>
                         <strong>Rafael Ricardo Pinheiro Zoucas</strong>
                         <p>(18) 9 9999-9999</p>
@@ -66,12 +57,26 @@ export default function Deliveryman() {
                         <FontAwesomeIcon icon="check-circle" className={styles.checkCircle} />
                     </div>
 
-                    <button className="success">Enviar</button>
+                    <div className={styles.addActionInput}>
+                        <input type="text" name="" id="" placeholder="Nova observação" />
+
+                        <button>
+                            <FontAwesomeIcon icon="plus-circle" />
+                        </button>
+                    </div>
                 </div>
+                <button className="success">Enviar</button>
             </div>
 
             <div className={styles.receipt}>
-                {/* <img src="" alt="" /> */}
+                <div className={pages.groupBtnSmall}>
+                    <button className={pages.active}>Foto</button>
+                    <button>CNH</button>
+                    <button>Veículo</button>
+                    <button>Residência</button>
+                </div>
+                
+                <img src="" alt="" />
             </div>
         </>
     )

@@ -17,10 +17,7 @@ export default function PendingDeliveryman() {
             <div className={styles.info}>
                 <strong>Willian Sandro Vieira</strong>
                 <span>(18) 9 9874-5656</span>
-                <span>Rua Castro Alves, 1 - Assis SP</span>
             </div>
-
-            <button>Avaliar</button>
         </div>
     )
 }

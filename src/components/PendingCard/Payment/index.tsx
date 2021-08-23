@@ -21,8 +21,6 @@ export default function PendingPayment() {
                 <span>Está pagando</span>
                 <span>R$ 150,00</span>
             </div>
-
-            <button>Avaliar</button>
         </div>
     )
 }

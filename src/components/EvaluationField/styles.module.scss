@@ -19,53 +19,43 @@
         justify-content: space-between;
         
         width: 50%;
+
+        overflow-x: hidden;
         
-        .data {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-
-            margin-top: 1rem;
-
-            .profilePicture {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-
-                width: 5rem;
-                height: 5rem;
-
-                background-color: var(--gray-300);
-
-                font-size: 3rem;
-                color: #fff;
-
-                border-radius: 4rem;
-            }
-
+        .dataDeliveryman {
+            width: 100%;
+            
+            margin: 1rem 0; 
+            
             .info {
                 display: flex;
                 flex-direction: column;
-                // align-items: center;
-
-                margin-left: 1rem;
-
+                
                 color: var(--gray-500);
-
+                
                 max-width: 300px;
-
+                
                 p {
                     margin-top: 0.25rem;
                 }
             }
         }
-
+        
         .actions {
             position: relative;
-            bottom: 0;
-            color: var(--gray-300);
+            
+            bottom: 1rem;
+            margin-top: 0.5rem;
 
+            padding-right: 0.5rem;
+            
+            color: var(--gray-300);
+            
+            min-height: 200px;
+            height: 100%;
+
+            overflow-y: scroll;
+            
             .action {
                 display: flex;
                 align-items: center;
@@ -84,6 +74,23 @@
                 
                 .checkCircle {
                     display: none;
+                }
+            }
+            
+            .addActionInput {
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                
+                input {
+                    height: 3rem;
+                    margin-top: 0.5rem;
+                }
+
+                button {
+                    font-size: 2rem;
+                    width: 20%;
+                    color: var(--orange-700);
                 }
             }
             
@@ -144,15 +151,7 @@
                     font-size: 1.5rem;
                 }
             }
-
-            button {
-                height: 4rem;
-                font-weight: 500;
-
-                margin-top: 1.5rem;
-            }
         }
-
     }
 
     .receipt {
@@ -211,4 +210,19 @@
             }
         }
     }
+}
+
+@media(max-width: 1440px) {
+    .toEvaluate{
+        .data {
+
+            .info {
+
+                p {
+                    font-size: 0.875rem;
+        
+                }
+            }
+        }
+    } 
 }

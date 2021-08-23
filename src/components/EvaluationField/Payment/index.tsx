@@ -56,9 +56,17 @@ export default function Payment() {
                         Comprovante falsificado
                         <FontAwesomeIcon icon="check-circle" className={styles.checkCircle} />
                     </div>
+                    
+                    <div className={styles.addActionInput}>
+                        <input type="text" name="" id="" placeholder="Nova observação" />
 
-                    <button className="success">Confirmar pagamento</button>
+                        <button>
+                            <FontAwesomeIcon icon="plus-circle" />
+                        </button>
+                    </div>
                 </div>
+                
+                <button className="success">Confirmar pagamento</button>
             </div>
 
             <div className={styles.receipt}>
