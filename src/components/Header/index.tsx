@@ -12,11 +12,14 @@ import styles from './styles.module.scss'
 import { useState } from 'react'
 import Notifications from '../Modals/Notifications'
 import NewDelivery from '../Modals/NewDelivery'
+import NewPayment from '../Modals/NewPayment'
 
 export default function Header(props) {
     const [isNotificationsVisible, setIsNotificationsVisible] = useState(false)
     const [isSearchInputVisible, setIsSearchInputVisible] = useState(false)
     const [isModalNewDeliveryVisible, setIsModalNewDeliveryVisible] = useState(false)
+    const [isNewOptionsVisible, setIsNewOptionsVisible] = useState(false)
+    const [isNewPaymentVisible, setIsNewPaymentVisible] = useState(false)
 
 
     const openNotifications = () => {
@@ -31,8 +34,18 @@ export default function Header(props) {
         }
     }
 
-    const newOptions = () => {
+    const newDelivery = () => {
         setIsModalNewDeliveryVisible(true)
+        setIsNewOptionsVisible(false)
+    }
+
+    const newPayment = () => {
+        setIsNewPaymentVisible(true)
+        setIsNewOptionsVisible(false)
+    }
+
+    const newOptions = () => {
+        setIsNewOptionsVisible(true)
     }
     
     return(
@@ -84,10 +97,27 @@ export default function Header(props) {
                         <span>+</span>
                     </button>
 
+                    {isNewOptionsVisible ? (
+                        <div 
+                            className={styles.newOptionsContainer}
+                        >
+                            <p onClick={newPayment}>Novo pagamento</p>
+                            <p onClick={newDelivery}>Nova entrega</p>
+                        </div>
+                    ) : null}
+
+                    {isNewPaymentVisible ? (
+                        <NewPayment 
+                            onClose={() => {
+                                setIsNewPaymentVisible(false)
+                            }} 
+                        />
+                    ) : null}
+
                     {isModalNewDeliveryVisible ? (
                         <NewDelivery 
                             onClose={() => {
-                            setIsModalNewDeliveryVisible(false)
+                                setIsModalNewDeliveryVisible(false)
                             }} 
                         />
                     ) : null}

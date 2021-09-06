@@ -14,8 +14,8 @@ library.add(fas)
 export default function EvaluationField() {
     return(
         <div className={styles.container}>
-            <Deliveryman />
-            {/* <Payment /> */}
+            {/* <Deliveryman /> */}
+            <Payment />
             {/* <Costumer /> */}
         </div>
     )

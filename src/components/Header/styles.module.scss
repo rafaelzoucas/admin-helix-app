@@ -148,5 +148,31 @@
     
             }
         }
+
+        .newOptionsContainer {
+            position: fixed;
+
+            display: flex;
+            flex-direction: column;
+
+            top: 4rem;
+            right: 2rem;
+
+            background-color: #FFF;
+            border-radius: 10px;
+
+            box-shadow: 3px 3px 25px rgba($color: #000000, $alpha: 0.2);
+
+            padding: 1rem;
+
+            width: 400px;
+
+            gap: 1rem;
+
+            p {
+                cursor: pointer;
+                padding: 1rem;
+            }
+        }
     }
 }
