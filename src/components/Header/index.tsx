@@ -31,7 +31,7 @@ export default function Header(props) {
         }
     }
 
-    const openModalNewDelivery = () => {
+    const newOptions = () => {
         setIsModalNewDeliveryVisible(true)
     }
     
@@ -78,7 +78,7 @@ export default function Header(props) {
                     </button>
 
                     <button 
-                        onClick={openModalNewDelivery} 
+                        onClick={newOptions} 
                         className={styles.newDelivery}
                     >
                         <span>+</span>
