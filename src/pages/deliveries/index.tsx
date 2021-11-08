@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import styles from '../pages.module.scss'
 
@@ -9,8 +9,14 @@ import { fas } from '@fortawesome/free-solid-svg-icons'
 library.add(fas)
 
 import PendingCostumer from '../../components/PendingCard/Costumer'
+import CancelDelivery from '../../components/Modals/CancelDelivery'
 
 export default function Costumers() {
+    const [isModalConfirmCancelOpened, setIsModalConfirmCancelOpened] = useState(false)
+    
+    function openConfirmCancel() {
+        setIsModalConfirmCancelOpened(true)
+    }
     return(
         <div className={styles.container}>
             <div className={styles.list}>
@@ -80,12 +86,12 @@ export default function Costumers() {
                             <strong className={styles.col2}>Rua do Endereço da Entrega, 1234</strong>
 
                             <div className={`${styles.col3} ${styles.btns}`}>
-                                <button className={styles.block}>
-                                    <FontAwesomeIcon icon="times-circle" />
-                                </button>
-
                                 <button className={styles.release}>
                                     <FontAwesomeIcon icon="eye" />
+                                </button>
+
+                                <button className={styles.block} onClick={openConfirmCancel}>
+                                    <FontAwesomeIcon icon="times-circle" />
                                 </button>
                             </div>
                         </article>
@@ -206,19 +212,24 @@ export default function Costumers() {
                             <strong className={styles.col2}>Rua do Endereço da Entrega, 1234</strong>
 
                             <div className={`${styles.col3} ${styles.btns}`}>
-                                <button className={styles.block}>
-                                    <FontAwesomeIcon icon="times-circle" />
-                                </button>
-
                                 <button className={styles.release}>
                                     <FontAwesomeIcon icon="eye" />
                                 </button>
+
+                                <button className={styles.block}>
+                                    <FontAwesomeIcon icon="times-circle" />
+                                </button>
                             </div>
                         </article>
-
                     </section>
                 </main>
             </div>
+
+            {isModalConfirmCancelOpened ? (
+                <CancelDelivery 
+                    onClose={() => setIsModalConfirmCancelOpened(false)}
+                />
+            ) : null}
 
             <div className={styles.pendencies}>
                 <div className={styles.resumeTodayContainer}>
