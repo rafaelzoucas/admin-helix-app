@@ -3,6 +3,5 @@
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
   "/deliveries": "pages/deliveries.js",
-  "/costumers": "pages/costumers.js",
-  "/next/dist/pages/_error": "pages/next/dist/pages/_error.js"
+  "/costumers": "pages/costumers.js"
 }
