@@ -19,6 +19,12 @@ export default function Navbar() {
                     </button>
                 </Link>
 
+                <Link href="/deliveries">
+                    <button>
+                        <FontAwesomeIcon icon="rocket" />
+                    </button>
+                </Link>
+
                 <Link href="/costumers">
                     <button>
                         <FontAwesomeIcon icon="users" />
